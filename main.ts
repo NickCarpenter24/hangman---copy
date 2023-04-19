@@ -4,6 +4,9 @@ namespace SpriteKind {
 /**
  * My function
  */
+/**
+ * Changed the appearance of the character
+ */
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     findLetterByPos()
     posLetter = word.indexOf(letter)
@@ -93,8 +96,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
                 ...........8....
                 ............8...
                 ............8...
-                .............8..
-                .............8..
+                .............1..
+                .............11.
                 ................
                 ................
                 ................
@@ -128,8 +131,8 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
                 ...8............
                 ..8.............
                 ..8.............
-                .8..............
-                .8..............
+                .1..............
+                11..............
                 ................
                 ................
                 ................
@@ -1128,41 +1131,41 @@ let words = [
 "QUITE",
 "QUOTE",
 "QUAIL",
-"ABUNDANT",
-"THRIVE",
-"CANOPY",
-"RESIST",
-"RETAIN",
-"THIRTY",
-"SYNONYM",
-"ANTONYM",
-"COVERED",
-"ANYONE",
-"SEVERAL",
-"JUVENILE",
-"REPTILE",
-"TOWARD",
-"FRAGILE",
-"HOSTILE",
-"MOBILE",
-"TONSIL",
-"EVIL",
-"DEPEND",
-"RESOURCE",
-"FACTORY",
-"MOUNTAIN",
-"BYTE",
-"EXTEND",
-"KEYBOARD",
-"MONITOR",
-"VOWEL",
-"PORTAL",
-"TUNNEL",
-"AGAINST",
-"PASTEL",
-"FATAL",
-"OVAL",
-"TOWEL",
+"RADAR",
+"ROBOT",
+"REBEL",
+"RHINO",
+"RIVAL",
+"SALAD",
+"SCENT",
+"SHADE",
+"SYRUP",
+"SLACK",
+"TABLE",
+"TEETH",
+"THINK",
+"TIMID",
+"TWIST",
+"UNDER",
+"UNION",
+"UNITE",
+"UNTIL",
+"UPSET",
+"VAPOR",
+"VAULT",
+"VERSE",
+"VENUE",
+"VIGOR",
+"WASTE",
+"WATER",
+"WEIRD",
+"WHIFF",
+"WRIST",
+"YACHT",
+"YEARN",
+"YEAST",
+"YIELD",
+"YOUTH",
 "CHAPEL",
 "TINSEL",
 "CONSUMER",
