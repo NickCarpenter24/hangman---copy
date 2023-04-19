@@ -781,7 +781,11 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
             letterChoosen.setPosition(52 + 16 * posLetter, 40)
             if (score == wordLen) {
                 game.splash("You Win!")
+                for (let index = 0; index < 4; index++) {
+                    effects.confetti.startScreenEffect()
+                }
                 game.reset()
+                effects.confetti.endScreenEffect()
             }
             console.log("sobrando - " + word.substr(posLetter + 1, word.length))
             if (word.substr(posLetter + 1, word.length).indexOf(letter) >= 0) {
@@ -839,7 +843,7 @@ function sayCorrectOrIncorrect (text: string) {
         effects.confetti.endScreenEffect()
     } else if (text == "CORRECT!") {
         game.splash("CORRECT!")
-        for (let index = 0; index < 2; index++) {
+        for (let index = 0; index < 10; index++) {
             effects.confetti.startScreenEffect()
         }
     }
@@ -852,6 +856,9 @@ function findLetterByPos () {
  */
 /**
  * Added the call to my function
+ */
+/**
+ * Added a confetti animation for when the game is won.
  */
 /**
  * changed the appearance of the letters
@@ -1057,64 +1064,64 @@ let words = [
 "EMPTY",
 "FALSE",
 "FERRY",
-"COLON",
-"CHILDREN",
-"HEAVEN",
-"SATIN",
-"PENGUIN",
-"ORGANISM",
-"USUALLY",
-"FRIENDS",
-"WHOM",
-"HEARD",
-"ORDER",
-"VILLAIN",
-"BASIN",
-"CARTON",
-"BECOME",
-"MUFFIN",
-"PUMPKIN",
-"APRON",
-"CANNON",
-"POISON",
-"LANDFORM",
-"PRIME",
-"WILDFIRE",
-"TROPICAL",
-"DEPOSIT",
-"TWELVE",
-"PROVERB",
-"ACROSS",
-"TODAY",
-"DURING",
-"METAPHOR",
-"SIMILE",
-"QUIZ",
-"HOWEVER",
-"PROPOSAL",
-"BRIDAL",
-"DENTAL",
-"GERBIL",
+"FIELD",
+"FLAME",
+"FOCUS",
+"GLASS",
+"GRAVE",
+"GHOST",
+"GRIND",
+"GUESS",
+"HABIT",
+"HOTEL",
+"HELLO",
+"HOUSE",
+"HYENA",
+"IMAGE",
+"INPUT",
+"IDIOM",
+"IGLOO",
+"IVORY",
+"JELLY",
+"JEANS",
+"JOKER",
+"JUDGE",
+"JUICE",
+"KAYAK",
+"KHAKI",
+"KIOSK",
+"KNIFE",
+"KNEAD",
+"LABEL",
+"LEASH",
+"LOBBY",
+"LOATH",
+"LIVER",
+"MAGMA",
+"MAFIA",
+"MELON",
+"MIDST",
+"MONTH",
 "NASAL",
-"POSTAL",
-"CLIMATE",
-"INVERSE",
-"TAIGA",
-"HOURS",
-"TWENTY",
-"PRODUCTS",
-"HAPPENED",
-"WHINE",
-"MEASURE",
-"REMEMBER",
-"EARLY",
-"UTENSIL",
-"MORTAL",
-"VOCAL",
-"MENTAL",
-"NEUTRAL",
-"ANVIL",
-"COUNCIL",
+"NURSE",
+"NERVE",
+"NOISY",
+"NUDGE",
+"OASIS",
+"OFTEN",
+"OLIVE",
+"OPERA",
+"ORDER",
+"PANEL",
+"PARTY",
+"PEACH",
+"PURGE",
+"PIVOT",
+"QUEEN",
+"QUART",
+"QUITE",
+"QUOTE",
+"QUAIL",
 "ABUNDANT",
 "THRIVE",
 "CANOPY",
