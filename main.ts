@@ -2,11 +2,33 @@ namespace SpriteKind {
     export const cursor = SpriteKind.create()
 }
 /**
- * My function
+ * Citing code from HangMan: https://arcade.makecode.com/24050-52891-98139-04377
  */
 /**
- * Changed the appearance of the character
+ * The function I wrote with a parameter
  */
+/**
+ * End my function
+ */
+/**
+ * Citing code from HangMan: https://arcade.makecode.com/24050-52891-98139-04377
+ */
+/**
+ * End cited code
+ */
+/**
+ * Added the call to my function
+ */
+/**
+ * Changed the appearance of the letters
+ */
+/**
+ * Added a confetti animation for when the game is won.
+ */
+/**
+ * End cited code
+ */
+// Changed the appearance of the character
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     findLetterByPos()
     posLetter = word.indexOf(letter)
@@ -820,6 +842,9 @@ controller.left.onEvent(ControllerButtonEvent.Pressed, function () {
     }
     cursor2.x = posX
 })
+/**
+ * Citing code from HangMan: https://arcade.makecode.com/24050-52891-98139-04377
+ */
 controller.right.onEvent(ControllerButtonEvent.Released, function () {
     if (posX == maxX || posX == maxX - 16 && posY == maxY) {
         posX = 16
@@ -840,6 +865,9 @@ controller.up.onEvent(ControllerButtonEvent.Released, function () {
     }
     cursor2.y = posY
 })
+/**
+ * Added the call to my function
+ */
 function sayCorrectOrIncorrect (text: string) {
     if (text == "INCORRECT!") {
         game.splash("INCORRECT!")
@@ -855,22 +883,40 @@ function findLetterByPos () {
     letter = String.fromCharCode(65 + ((posY - 47) / 16 - 1) * 9 + (posX / 16 - 1))
 }
 /**
+ * Citing code from HangMan: https://arcade.makecode.com/24050-52891-98139-04377
+ */
+/**
+ * End cited code
+ */
+/**
  * Added to the background and added spaces for the correctly guessed letters to go
  */
 /**
- * Changed the array of possible words to 5 5-letter words beginning with each letter (except for "X" and "Z"
+ * Citing code from HangMan: https://arcade.makecode.com/24050-52891-98139-04377
  */
 /**
- * Added the call to my function
+ * End cited code
  */
 /**
- * Added the call to my function
+ * Changed the list of possible words to 5 5-letter words beginning with each letter (except for "X" and "Z"
  */
 /**
- * Added a confetti animation for when the game is won.
+ * Citing code from HangMan: https://arcade.makecode.com/24050-52891-98139-04377
  */
 /**
- * changed the appearance of the letters
+ * End cited code
+ */
+/**
+ * Citing code from HangMan: https://arcade.makecode.com/24050-52891-98139-04377
+ */
+/**
+ * End cited code
+ */
+/**
+ * Changed the appearance of the letters
+ */
+/**
+ * End cited code
  */
 let varG: Image = null
 let varLetter: Image = null
@@ -892,14 +938,14 @@ let posY = 0
 let posX = 0
 let maxX = 0
 let cursor2: Sprite = null
-let varI = null
-let varH = null
-let varF = null
-let varE = null
-let varD = null
-let varC = null
-let varB = null
 let varA = null
+let varB = null
+let varC = null
+let varD = null
+let varE = null
+let varF = null
+let varH = null
+let varI = null
 scene.setBackgroundColor(1)
 scene.setBackgroundImage(img`
     999efeeeeeeeeeeefffeeeeeeeeefe9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -1166,459 +1212,7 @@ let words = [
 "YEAST",
 "YIELD",
 "YOUTH",
-"CHAPEL",
-"TINSEL",
-"CONSUMER",
-"PRODUCER",
-"TOMATOES",
-"SLOWLY",
-"POTATO",
-"CARROT",
-"ONION",
-"JUNGLE",
-"CRUMBLE",
-"VOICE",
-"PUZZLE",
-"ANKLE",
-"FRECKLE",
-"KNUCKLE",
-"SPRINKLE",
-"DIMPLE",
-"HABITAT",
-"MIMICRY",
-"PREDATOR",
-"PREY",
-"THIRTEEN",
-"APPOINT",
-"DISCUSS",
-"DEMAND",
-"REQUEST",
-"RELIEF",
-"CAPTURE",
-"CULTURE",
-"CREATURE",
-"FIXTURE",
-"FRACTURE",
-"SPECIES",
-"VIEW",
-"DENSITY",
-"FOURTEEN",
-"PLENTY",
-"RELAX",
-"FIGURE",
-"FIELD",
-"TRAVEL",
-"SENTENCE",
-"SKETCH",
-"RANCHER",
-"BLEACHER",
-"RICHER",
-"VOUCHER",
-"PITCHER",
-"CATCHER",
-"URBAN",
-"SUBURBAN",
-"RURAL",
-"FORTY",
-"ENGLISH",
-"HALF",
-"MINUS",
-"PLUS",
-"PERCENT",
-"QUARTER",
-"FINALLY",
-"ZERO",
-"FRESHER",
-"USHER",
-"GUSHER",
-"CRUSHER",
-"FLASHER",
-"BALANCED",
-"SLIDE",
-"SWINGS",
-"GOAL",
-"COACH",
-"BECAME",
-"SHOWN",
-"MINUTES",
-"PASTURE",
-"LECTURE",
-"MIXTURE",
-"MOISTURE",
-"PUNCTURE",
-"OMNIVORE",
-"FIFTEEN",
-"POLITE",
-"PEANUT",
-"SOCCER",
-"BACKPACK",
-"DECIDED",
-"CONTAIN",
-"COURSE",
-"SURFACE",
-"PRODUCE",
-"PREACHER",
-"PRESSURE",
-"CLOSURE",
-"TREASURE",
-"PIONEER",
-"MIGRATE",
-"BUILDING",
-"SPELLING",
-"CLASS",
-"FIFTY",
-"NOTHING",
-"REVISE",
-"INSIDE",
-"WHEELS",
-"LEISURE",
-"SEIZURE",
-"PLEASURE",
-"VULTURE",
-"RUPTURE",
-"ERRATIC",
-"MORAINE",
-"CIRQUE",
-"MONOLITH",
-"EVALUATE",
-"SOLUTION",
-"SIXTEEN",
-"CHICKEN",
-"ELEPHANT",
-"ISLAND",
-"GORILLA",
-"DOLPHIN",
-"MACHINE",
-"TICKET",
-"DIET",
-"PUPPET",
-"BANQUET",
-"BLANKET",
-"GADGET",
-"MUSKET",
-"POET",
-"SQUATTER",
-"STRIKE",
-"WATT",
-"CIRCUIT",
-"SIXTY",
-"SYSTEM",
-"BUFFALO",
-"MONKEY",
-"WOLVES",
-"KANGAROO",
-"FORCE",
-"BROUGHT",
-"AUDIT",
-"CREDIT",
-"HERMIT",
-"VOMIT",
-"HABIT",
-"BANDIT",
-"BROWSER",
-"MEMORY",
-"EXPLAIN",
-"ADAGE",
-"COURAGE",
-"LANGUAGE",
-"LUGGAGE",
-"STORAGE",
-"BANDAGE",
-"CABBAGE",
-"CARRIAGE",
-"DAMAGE",
-"GARBAGE",
-"DELTA",
-"COLLEGE",
-"DEGREE",
-"RHOMBUS",
-"EQUATION",
-"AVERAGE",
-"FILLED",
-"PLEDGE",
-"BRIDGE",
-"RIDGE",
-"WEDGE",
-"LEDGE",
-"PORRIDGE",
-"GLOBE",
-"PUBLIC",
-"PRIVATE",
-"ACADEMIC",
-"OBJECT",
-"CASTLE",
-"KNIGHT",
-"QUEEN",
-"PRINCE",
-"KINGDOM",
-"ALONE",
-"GHOST",
-"ROBOT",
-"PROGRAM",
-"COMPOSE",
-"COASTAL",
-"SOAPY",
-"TOASTER",
-"OWNER",
-"BOOMTOWN",
-"PETITION",
-"SLAVERY",
-"FUGITIVE",
-"SOLO",
-"DUET",
-"MATERIAL",
-"SPECIAL",
-"HEAVY",
-"TRIO",
-"CHOIR",
-"INCLUDE",
-"HOMEWORK",
-"LOWER",
-"BONY",
-"STROLLER",
-"DECODE",
-"MOLTEN",
-"ENGINEER",
-"STATIC",
-"POSITIVE",
-"NEGATIVE",
-"SQUARE",
-"PERHAPS",
-"HAMMER",
-"NAIL",
-"SUDDENLY",
-"CHAIN",
-"WRENCH",
-"ADOPT",
-"BOTHER",
-"CONGRESS",
-"COMMENT",
-"MONSTER",
-"PARALLEL",
-"SERIES",
-"CHARGE",
-"EXPORT",
-"IMPORT",
-"HOTEL",
-"GUEST",
-"READY",
-"ANYTHING",
-"ELEVATOR",
-"ENERGY",
-"SUBJECT",
-"EUROPE",
-"UMBRELLA",
-"BUBBLE",
-"HUSBAND",
-"BUCKET",
-"PUBLISH",
-"SNUGGLE",
-"RATION",
-"STOCK",
-"DROUGHT",
-"AQUEDUCT",
-"REGION",
-"RETURN",
-"BELIEVE",
-"JOINED",
-"MEMBERS",
-"CONTEST",
-"REJECT",
-"CELLS",
-"UNIVERSE",
-"COMPUTER",
-"ABUSE",
-"LUKEWARM",
-"SALUTE",
-"RUMOR",
-"TUTOR",
-"ACTOR",
-"MAGNETIC",
-"POLES",
-"EIGHTY",
-"SHERIFF",
-"RODEO",
-"EXERCISE",
-"WAGON",
-"TRAIN",
-"RAILROAD",
-"SADDLE",
-"CALF",
-"ALARM",
-"CARBON",
-"CHARCOAL",
-"MARBLE",
-"SCARLET",
-"AURORA",
-"QUADRANT",
-"ORDERED",
-"GRID",
-"SEGMENT",
-"WINDOW",
-"EIGHTEEN",
-"HEART",
-"SITE",
-"BURNING",
-"CORNER",
-"CURTAIN",
-"PROBABLY",
-"PARSLEY",
-"TARDY",
-"TARIFF",
-"PRAIRIE",
-"BARREL",
-"HEXAGON",
-"NINETY",
-"FORWARD",
-"PURPLE",
-"CHORD",
-"PORCH",
-"WRITTEN",
-"PURPOSE",
-"REASON",
-"KEPT",
-"INTEREST",
-"BERRY",
-"CHERUB",
-"MERIT",
-"PERISH",
-"MERCY",
-"ELECTION",
-"NINETEEN",
-"SCORE",
-"COUSIN",
-"PRESENT",
-"CHARM",
-"FORMAT",
-"PORTRAIT",
-"MERGE",
-"SQUIRT",
-"SERMON",
-"VERDICT",
-"BLEARY",
-"LEARNING",
-"ANGLE",
-"OBTUSE",
-"ACUTE",
-"VERTEX",
-"FINISHED",
-"AMUSE",
-"BESIDE",
-"CONCERN",
-"THORN",
-"SWORD",
-"MILLION",
-"CLEARING",
-"YEARLY",
-"CAREER",
-"MERELY",
-"SINCERE",
-"ROTATION",
-"SYMMETRY",
-"KITCHEN",
-"DINING",
-"PANTRY",
-"ORNAMENT",
-"STORM",
-"AFFORD",
-"RAISED",
-"BURDEN",
-"PURCHASE",
-"PLURAL",
-"SURGEON",
-"ENDURE",
-"JUDICIAL",
-"BRANCH",
-"DISTRICT",
-"REPLY",
-"WHETHER",
-"CLOTHES",
-"FLOWERS",
-"SCAN",
-"DELETE",
-"ADDRESS",
-"DESCRIBE",
-"STERN",
-"MATURE",
-"OBSCURE",
-"SURELY",
-"ASSURE",
-"MANURE",
-"DIRTY",
-"CURB",
-"RADIUS",
-"DIAMETER",
-"ACTRESS",
-"THEATRE",
-"SOLVE",
-"APPEAR",
-"METAL",
-"DRAMATIC",
-"EITHER",
-"NEITHER",
-"GOOSE",
-"VILLAGE",
-"ALOOF",
-"MOODY",
-"RACCOON",
-"ASKEW",
-"JEWEL",
-"MOOSE",
-"OUNCE",
-"FACTORS",
-"RESULT",
-"CAMERA",
-"VIDEO",
-"IMAGE",
-"FRAME",
-"MOVIES",
-"ZOOM",
-"COOKIES",
-"FLOODING",
-"COOKOUT",
-"WOODLAND",
-"MISTOOK",
-"SPOOKY",
-"PARTIAL",
-"DECADE",
-"CENTURY",
-"OUTSIDE",
-"RELEASE",
-"ALREADY",
-"INSTEAD",
-"PHRASE",
-"FRACTION",
-"INSECURE",
-"ILLEGAL",
-"ORANGE",
-"BANANA",
-"LAUGHED",
-"LEMON",
-"QUITE",
-"TYPE",
-"REACTION",
-"ADOPTION",
-"ILLICIT",
-"IMMATURE",
-"MIRROR",
-"BREEZE",
-"CALM",
-"METHOD",
-"SECTION",
-"DEVOTION",
-"WITHIN",
-"IMMOBILE",
-"IMMORAL",
-"IRRITATE",
-"RIBBON",
-"QUANTITY",
-"AMOUNT",
-"SCALE",
-"REMOVE",
-"ALTHOUGH",
-"BROKEN",
-"MOMENT",
-"ECOLOGY"
+""
 ]
 cursor2.setPosition(posX, posY)
 let btA = sprites.create(img`
@@ -2115,7 +1709,7 @@ let btZ = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     `, SpriteKind.Player)
 btZ.setPosition(posX + 16 * 7, posY + 32)
-while (wordLen == 0 || wordLen < 7) {
+while (wordLen == 0 || wordLen > 7) {
     word = words[randint(0, words.length)]
     wordLen = word.length
     console.log(word)
@@ -2139,8 +1733,8 @@ let wordScene = img`
     ........................................................................................................................
     ........................................................................................................................
     `
-for (let index2 = 0; index2 <= wordLen - 1; index2++) {
-    wordScene.drawLine(16 * index2, 16, 16 * index2 + 14, 16, 2)
+for (let index22 = 0; index22 <= wordLen - 1; index22++) {
+    wordScene.drawLine(16 * index22, 16, 16 * index22 + 14, 16, 2)
 }
 let wordSceneVar = sprites.create(img`
     . . . . . . . . . . . . . . . . 
